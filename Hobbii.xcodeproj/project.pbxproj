@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D063D2D2500F26800D2E6A2 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D063D2C2500F26800D2E6A2 /* AsyncImage.swift */; };
+		2D063D2F2500F2F700D2E6A2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D063D2E2500F2F700D2E6A2 /* ImageLoader.swift */; };
+		2D063D322500F4D800D2E6A2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D063D312500F4D800D2E6A2 /* ImageCache.swift */; };
 		2D40BF2D24F583AB007EEF1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF2C24F583AB007EEF1F /* AppDelegate.swift */; };
 		2D40BF2F24F583AB007EEF1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF2E24F583AB007EEF1F /* SceneDelegate.swift */; };
 		2D40BF3124F583AB007EEF1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF3024F583AB007EEF1F /* ContentView.swift */; };
 		2D40BF3324F583B0007EEF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D40BF3224F583B0007EEF1F /* Assets.xcassets */; };
 		2D40BF3624F583B0007EEF1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D40BF3524F583B0007EEF1F /* Preview Assets.xcassets */; };
 		2D40BF3924F583B0007EEF1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D40BF3724F583B0007EEF1F /* LaunchScreen.storyboard */; };
-		2D40BF4124F58B13007EEF1F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF4024F58B13007EEF1F /* Product.swift */; };
 		2D40BF4524F59518007EEF1F /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D40BF4424F59518007EEF1F /* AuthenticationServices.framework */; };
 		2D40BF4724F59738007EEF1F /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF4624F59738007EEF1F /* KeychainItem.swift */; };
 		2D40BF4E24F5A6D9007EEF1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF4D24F5A6D9007EEF1F /* LoginView.swift */; };
@@ -22,14 +24,31 @@
 		2D40BF5824F6DEB8007EEF1F /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF5724F6DEB8007EEF1F /* ProductsViewModel.swift */; };
 		2D40BF5A24F6DFB2007EEF1F /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF5924F6DFB2007EEF1F /* ProductsListView.swift */; };
 		2D40BF6124F6E436007EEF1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6024F6E436007EEF1F /* LoginViewModel.swift */; };
-		2D40BF6424F6E632007EEF1F /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6324F6E632007EEF1F /* Webservice.swift */; };
 		2D40BF6624F793EF007EEF1F /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6524F793EF007EEF1F /* ProductView.swift */; };
-		2D40BF6824F79787007EEF1F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6724F79787007EEF1F /* ImageLoader.swift */; };
 		2D40BF6A24F7A79F007EEF1F /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6924F7A79F007EEF1F /* Star.swift */; };
 		2D40BF6C24F7BAD7007EEF1F /* LoggedInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40BF6B24F7BAD7007EEF1F /* LoggedInState.swift */; };
+		2DE714E124FE21BD00BBB6F0 /* HobbiiService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE714E024FE21BD00BBB6F0 /* HobbiiService.framework */; };
+		2DE714E224FE21BD00BBB6F0 /* HobbiiService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE714E024FE21BD00BBB6F0 /* HobbiiService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2DE714E324FE21BD00BBB6F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2DE714E224FE21BD00BBB6F0 /* HobbiiService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2D063D2C2500F26800D2E6A2 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		2D063D2E2500F2F700D2E6A2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2D063D312500F4D800D2E6A2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2D40BF2924F583AB007EEF1F /* Hobbii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobbii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D40BF2C24F583AB007EEF1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D40BF2E24F583AB007EEF1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +57,6 @@
 		2D40BF3524F583B0007EEF1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D40BF3824F583B0007EEF1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D40BF3A24F583B0007EEF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D40BF4024F58B13007EEF1F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2D40BF4224F593BE007EEF1F /* Hobbii.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hobbii.entitlements; sourceTree = "<group>"; };
 		2D40BF4424F59518007EEF1F /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		2D40BF4624F59738007EEF1F /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
@@ -48,11 +66,10 @@
 		2D40BF5724F6DEB8007EEF1F /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		2D40BF5924F6DFB2007EEF1F /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
 		2D40BF6024F6E436007EEF1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		2D40BF6324F6E632007EEF1F /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		2D40BF6524F793EF007EEF1F /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
-		2D40BF6724F79787007EEF1F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2D40BF6924F7A79F007EEF1F /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		2D40BF6B24F7BAD7007EEF1F /* LoggedInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInState.swift; sourceTree = "<group>"; };
+		2DE714E024FE21BD00BBB6F0 /* HobbiiService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HobbiiService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +78,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D40BF4524F59518007EEF1F /* AuthenticationServices.framework in Frameworks */,
+				2DE714E124FE21BD00BBB6F0 /* HobbiiService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D063D302500F4BE00D2E6A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D063D2E2500F2F700D2E6A2 /* ImageLoader.swift */,
+				2D063D312500F4D800D2E6A2 /* ImageCache.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2D40BF2024F583AB007EEF1F = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +114,7 @@
 		2D40BF2B24F583AB007EEF1F /* Hobbii */ = {
 			isa = PBXGroup;
 			children = (
-				2D40BF6224F6E60E007EEF1F /* Services */,
+				2D063D302500F4BE00D2E6A2 /* Helpers */,
 				2D40BF5624F6DEA6007EEF1F /* ViewModels */,
 				2D40BF5324F67643007EEF1F /* Models */,
 				2D40BF4C24F5A6CD007EEF1F /* Views */,
@@ -117,6 +144,7 @@
 		2D40BF4324F59518007EEF1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DE714E024FE21BD00BBB6F0 /* HobbiiService.framework */,
 				2D40BF4424F59518007EEF1F /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
@@ -129,6 +157,7 @@
 				2D40BF5124F65FF2007EEF1F /* SignInWithAppleView.swift */,
 				2D40BF5924F6DFB2007EEF1F /* ProductsListView.swift */,
 				2D40BF6524F793EF007EEF1F /* ProductView.swift */,
+				2D063D2C2500F26800D2E6A2 /* AsyncImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,7 +165,6 @@
 		2D40BF5324F67643007EEF1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2D40BF4024F58B13007EEF1F /* Product.swift */,
 				2D40BF6B24F7BAD7007EEF1F /* LoggedInState.swift */,
 			);
 			path = Models;
@@ -151,15 +179,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		2D40BF6224F6E60E007EEF1F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				2D40BF6324F6E632007EEF1F /* Webservice.swift */,
-				2D40BF6724F79787007EEF1F /* ImageLoader.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +189,7 @@
 				2D40BF2524F583AB007EEF1F /* Sources */,
 				2D40BF2624F583AB007EEF1F /* Frameworks */,
 				2D40BF2724F583AB007EEF1F /* Resources */,
+				2DE714E324FE21BD00BBB6F0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,21 +251,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D40BF6824F79787007EEF1F /* ImageLoader.swift in Sources */,
 				2D40BF2D24F583AB007EEF1F /* AppDelegate.swift in Sources */,
 				2D40BF5224F65FF2007EEF1F /* SignInWithAppleView.swift in Sources */,
+				2D063D322500F4D800D2E6A2 /* ImageCache.swift in Sources */,
 				2D40BF6A24F7A79F007EEF1F /* Star.swift in Sources */,
-				2D40BF6424F6E632007EEF1F /* Webservice.swift in Sources */,
 				2D40BF6124F6E436007EEF1F /* LoginViewModel.swift in Sources */,
 				2D40BF2F24F583AB007EEF1F /* SceneDelegate.swift in Sources */,
 				2D40BF6624F793EF007EEF1F /* ProductView.swift in Sources */,
+				2D063D2F2500F2F700D2E6A2 /* ImageLoader.swift in Sources */,
 				2D40BF6C24F7BAD7007EEF1F /* LoggedInState.swift in Sources */,
 				2D40BF4724F59738007EEF1F /* KeychainItem.swift in Sources */,
 				2D40BF5824F6DEB8007EEF1F /* ProductsViewModel.swift in Sources */,
+				2D063D2D2500F26800D2E6A2 /* AsyncImage.swift in Sources */,
 				2D40BF3124F583AB007EEF1F /* ContentView.swift in Sources */,
 				2D40BF5A24F6DFB2007EEF1F /* ProductsListView.swift in Sources */,
 				2D40BF4E24F5A6D9007EEF1F /* LoginView.swift in Sources */,
-				2D40BF4124F58B13007EEF1F /* Product.swift in Sources */,
 				2D40BF5024F5AAF8007EEF1F /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +405,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hobbii/Hobbii.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hobbii/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8US39V7M5J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Hobbii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

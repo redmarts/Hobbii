@@ -1,4 +1,7 @@
 import SwiftUI
+import HobbiiService
+
+extension ProductItem: Identifiable { }
 
 struct ProductsListView: View {
 	@ObservedObject var viewModel = ProductsViewModel()

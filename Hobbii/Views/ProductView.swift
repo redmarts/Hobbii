@@ -7,32 +7,32 @@
 //
 
 import SwiftUI
+import HobbiiService
+
 
 struct ProductView: View {
 	@State private var showDetails = false
-	@State private var image = UIImage()
-	@ObservedObject  var imageLoader: ImageLoader
-	var product: Product
+
+	@Environment(\.imageCache) var cache: ImageCache
+
+	var product: ProductItem
 
 	var rating: Double {
-		return product.reviews?.rating ?? 0
+		return product.rating ?? 0
 	}
 
 	var price: Double {
-		return product.price.regular
+		return product.price
 	}
 
-	init(product: Product) {
+	init(product: ProductItem) {
 		self.product = product
-		self.imageLoader = ImageLoader(url: product.image.url)
 	}
 
 	var body: some View {
 		VStack {
 			if showDetails {
-				Image(uiImage: image).resizable().aspectRatio(contentMode: .fill).onReceive(imageLoader.didChange) { data in
-					self.image = UIImage(data: data) ?? UIImage()
-				}
+				AsyncImage(url: product.imageUrl, placeholder: Text("Loading.."), cache: cache, configuration: { $0.resizable() }).aspectRatio(contentMode: .fill)
 
 				Text(product.name)
 				Text(product.description)
@@ -43,12 +43,11 @@ struct ProductView: View {
 				}.aspectRatio(contentMode: .fill)
 			} else {
 				HStack {
-					Image(uiImage: image).resizable().aspectRatio(contentMode: .fill).frame(width: 80, height: 80, alignment: .center).clipShape(Circle()).onReceive(imageLoader.didChange) { data in
-						self.image = UIImage(data: data) ?? UIImage()
-					}
-					Text(product.name).padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+					AsyncImage(url: product.imageUrl, placeholder: Text("Loading.."), cache: cache, configuration: { $0.resizable() }).aspectRatio(contentMode: .fill).frame(width: 80, height: 80, alignment: .center).clipShape(Circle())
+					Spacer(minLength: 10)
+					Text(product.name).frame(width: 160, height: 20, alignment: .leading)
 
-					Text(String(price)).frame(width: 100, height: 20, alignment: .trailing)
+					Text(String(price)).frame(width: 100, height: 20, alignment: .leading)
 				}
 			}
 		}.onTapGesture {

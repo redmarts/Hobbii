@@ -1,8 +1,10 @@
 import SwiftUI
+import HobbiiService
 
 struct LoginView: View {
 
-	//var viewModel = LoginViewModel()
+
+	@State var loogedIn = false
 
 	@EnvironmentObject var loggedInState: LoggedInState
 
@@ -14,8 +16,8 @@ struct LoginView: View {
 					.frame(width: 200, height: 50)
 
 			Button(action: {
+
 				self.loggedInState.loggedIn.toggle()
-				//self.viewModel.loginTapped()
 			}) {
 				Text("Skip login")
 			}

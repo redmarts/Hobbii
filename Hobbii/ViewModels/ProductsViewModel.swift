@@ -1,17 +1,18 @@
 import Foundation
 import SwiftUI
+import HobbiiService
 
 final class ProductsViewModel: ObservableObject {
-	let webservice = Webservice()
+	let productService = ServiceProvider.product()
 
 	init() {
 		fetchProducts()
 	}
 
-	@Published var products: [Product] = []
+	@Published var products: [ProductItem] = []
 
 	private func fetchProducts() {
-		webservice.loadProducts(countryCode: .DK) { products in
+		productService.loadProducts { products in
 			self.products = products
 		}
 	}

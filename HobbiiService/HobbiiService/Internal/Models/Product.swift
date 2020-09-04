@@ -1,11 +1,3 @@
-//
-//  Model.swift
-//  Hobbii
-//
-//  Created by Martin Dissing Söderlind on 25/08/2020.
-//  Copyright © 2020 Martin Söderlind. All rights reserved.
-//
-
 import Foundation
 
 struct VideoObject: Codable {
@@ -18,14 +10,7 @@ struct ImageObject: Codable {
 	var title: String
 	var alt: String
 	var video: VideoObject?
-}
-
-struct MultipleProducts: Codable {
-	var data: [Product]
-}
-
-struct SingleProduct: Codable {
-	var data: Product
+	var imageData: Data?
 }
 
 struct Product: Codable, Identifiable {
@@ -43,6 +28,7 @@ struct Product: Codable, Identifiable {
 	var sortOrder: Int? //Optional?
 	var discounts: [RuleObject]
 	var reviews: ReviewObject?
+	var imageData: Data?
 }
 
 struct RuleObject: Codable {

@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
 		// Create the SwiftUI view that provides the window contents.
+
 		let contentView = ContentView().environmentObject(LoggedInState())
-//		contentView.environmentObject(LoggedInState())
 		// Use a UIHostingController as window root view controller.
 		if let windowScene = scene as? UIWindowScene {
 		    let window = UIWindow(windowScene: windowScene)
@@ -61,3 +61,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+struct ImageCacheKey: EnvironmentKey {
+	static let defaultValue: ImageCache = TemporaryImageCache()
+}
+
+extension EnvironmentValues {
+	var imageCache: ImageCache {
+		get { self[ImageCacheKey.self] }
+		set { self[ImageCacheKey.self] = newValue }
+	}
+}
